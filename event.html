@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Aquarium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #e0f7ff;
+      margin: 0;
+    }
+
+    .topbar {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand span {
+      color: #0d6efd;
+    }
+
+    .hero-banner {
+      position: relative;
+      height: 85vh;
+      background: url('./assets/bg1.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      padding-left: 5%;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-banner .content {
+      position: relative;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .hero-banner h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-banner h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    .breadcrumb-link {
+      position: absolute;
+      bottom: 20px;
+      left: 5%;
+      z-index: 2;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .breadcrumb-link a {
+      color: #f57c00;
+      text-decoration: none;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #002a4a;
+    }
+
+    .section-heading p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      background-color: #003b71;
+      color: white;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .btn-dark {
+      background-color: #001f3f;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .btn-dark:hover {
+      background-color: #001737;
+    }
+
+    .newsletter {
+      background-color: #002c52;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .newsletter form {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .newsletter input[type="text"],
+    .newsletter input[type="email"] {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 30px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    .newsletter .form-check {
+      color: #ccc;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    .newsletter .btn {
+      background-color: #f57c00;
+      border: none;
+      border-radius: 999px;
+      padding: 10px 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .newsletter .btn:hover {
+      background-color: #e56f00;
+    }
+
+    .newsletter small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #ccc;
+    }
+
+    .ocean-trust-section {
+      position: relative;
+      background: url('./assets/banner\ of\ event.jpg') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .ocean-trust-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .ocean-trust-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ocean-trust-logo {
+      margin-bottom: 30px;
+      width: 220px;
+      max-width: 100%;
+    }
+
+    .ocean-trust-text {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .ocean-trust-btn {
+      background-color: #f43e7f;
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2.5rem;
+      }
+      .hero-banner h2 {
+        font-size: 1.5rem;
+      }
+      .newsletter h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar d-flex justify-content-between align-items-center px-4 py-1 text-dark small">
+    <div><strong>Mon-Thu:</strong> 10:00 AM – 11:00 PM | Last Entry 10:15 PM</div>
+    <div><strong>Fri-Sun:</strong> 10:00 AM – 12:00 AM | Last Entry 11:15 PM</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/5517/5517980.png" alt="Logo" width="40" class="me-2">
+        <span class="fw-bold fs-4">Nexus Aquarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="/e-project/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/e-project/gallery.html">Gallery</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marine Life</a>
+            <ul class="dropdown-menu dropdown-menu-light">
+              <li><a class="dropdown-item" href="/e-project/fish.html">Fish</a></li>
+              <li><a class="dropdown-item" href="/e-project/mamals.html">Mammals</a></li>
+              <li><a class="dropdown-item" href="/e-project/reptiles.html">Reptiles</a></li>
+              <li><a class="dropdown-item" href="#                             ">Crustaceans</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/e-project/event.html" role="button" >Events</a>
+          </li>
+         <li class="nav-item"><a class="nav-link" href="./booking.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="./timing-location.html">Timings & Location</a></li>
+        <li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="content">
+      <h1>EXPERIENCES</h1>
+      <h2>AND EVENTS</h2>
+    </div>
+    <div class="breadcrumb-link">
+      <a href="#">Home</a> | <span>Experiences & Events</span>
+    </div>
+  </section>
+
+  <!-- Section Heading -->
+  <div class="section-heading">
+    <h2>ALL EVENTS</h2>
+    <p>With a range of exciting and immersive ocean-themed events taking place at the National Marine Aquarium every
+      single month, find out all about what we've got lined up here.</p>
+  </div>
+
+  <!-- Activity Cards Section -->
+  <div class="container my-5" id="gallery-container">
+    <div id="activity-cards" class="row row-cols-1 row-cols-md-3 g-4 custom-gap ">
+      <!-- Cards will be injected here -->
+    </div>
+  </div>
+
+  <!-- Newsletter Signup -->
+  <div class="div">
+    <section class="newsletter">
+      <h2>NEWS & UPDATES</h2>
+      <p>Connect with our Aquarium to hear about exciting news and events before anyone else!</p>
+      <form>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control" placeholder="Email address">
+          </div>
+        </div>
+
+        <div class="form-check d-flex gap-3 justify-content-center flex-wrap">
+          <div><input class="form-check-input" type="checkbox" id="email"><label class="form-check-label ms-1"
+              for="email">Email</label></div>
+          <div><input class="form-check-input" type="checkbox" id="mail"><label class="form-check-label ms-1"
+              for="mail">Direct Mail</label></div>
+          <div><input class="form-check-input" type="checkbox" id="ads"><label class="form-check-label ms-1"
+              for="ads">Customized Online Advertising</label></div>
+        </div>
+
+        <button type="submit" class="btn mt-4">SIGN UP</button>
+
+        <small class="mt-3">We use Mailchimp as our marketing platform. By clicking to subscribe, you acknowledge that
+          your information will be transferred to Mailchimp for processing. <a href="#"
+            style="color: #fff; text-decoration: underline;">Learn more.</a></small>
+      </form>
+    </section>
+  </div>
+
+  <!-- Ocean Conservation Trust Section -->
+<div class="odiv">
+  <section class="ocean-trust-section">
+    <div class="ocean-trust-content">
+      <img src="https://www.national-aquarium.co.uk/wp-content/themes/NMA2020/img/oct.svg" alt="Ocean Trust Logo"
+        class="ocean-trust-logo" />
+      <p class="ocean-trust-text">
+        The National Marine Aquarium (NMA) is the UK’s National Aquarium, located in Britain’s Ocean City, Plymouth.
+        We are proudly the home of the Ocean Conservation Trust, a charity dedicated to connecting people with the
+        Ocean.
+      </p>
+      <a href="#" class="ocean-trust-btn">FIND OUT MORE</a>
+    </div>
+  </section>
+</div>
+  <!-- Footer -->
+<footer class="footer-section bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Nexus Aquarium</h4>
+        <p>Step into an underwater world filled with wonder. Nexus Aquarium brings marine life closer than ever before.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Gallery</a></li>
+          <li><a href="#" class="footer-link">Marine Life</a></li>
+          <li><a href="#" class="footer-link">Events</a></li>
+          <li><a href="#" class="footer-link">Bookings</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Washington, DC</p>
+        <p><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</p>
+        <p><i class="bi bi-envelope-fill"></i> info@nexusaquarium.com</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-twitter text-white"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bg-light" />
+    <div class="text-center small">
+      &copy; 2025 Nexus Aquarium. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+  <!-- JavaScript for dynamic cards -->
+  <script>
+    fetch('event.json')
+      .then(res => res.json())
+      .then(data => {
+        const gallery = document.getElementById('activity-cards');
+        data.forEach(activity => {
+          const col = document.createElement('div');
+          col.className = 'col';
+          col.innerHTML = `
+          <div class="card h-100 shadow">
+            <img src="${activity.image_url}" class="card-img-top" alt="${activity.description}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${activity.description.toUpperCase()}</h5>
+              <p><i class="bi bi-calendar-event text-danger me-2"></i>${activity.day}</p>
+              <p class="mb-3"><i class="bi bi-clock text-danger me-2"></i>${activity.time}</p>
+              <a href="#" class="btn btn-dark mt-auto">FIND OUT MORE</a>
+            </div>
+          </div>
+        `;
+          gallery.appendChild(col);
+        });
+      })
+      .catch(err => {
+        document.getElementById('gallery-container').innerHTML = `<p class="text-danger text-center">Failed to load gallery data.</p>`;
+        console.error(err);
+      });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

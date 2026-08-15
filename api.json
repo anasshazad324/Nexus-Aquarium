@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Clownfish",
+    "category": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2016/06/13/10/06/clownfish-1453910_1280.jpg",
+    "description": "Bright orange with white stripes, clownfish live among sea anemones."
+  },
+  {
+    "id": 2,
+    "name": "Blue Tang",
+    "category": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2016/03/29/16/53/blue-tang-1288727_1280.jpg",
+    "description": "Known for its deep blue color and oval body, made famous by 'Dory'."
+  },
+  {
+    "id": 3,
+    "name": "Dolphin",
+    "category": "Mammal",
+    "image_url": "https://cdn.pixabay.com/photo/2022/06/09/21/53/dolphin-7253357_1280.jpg",
+    "description": "Highly intelligent marine mammals known for their playful nature."
+  },
+  {
+    "id": 4,
+    "name": "Sea Turtle",
+    "category": "Reptile",
+    "image_url": "https://cdn.pixabay.com/photo/2022/04/15/07/25/green-turtle-7133765_1280.jpg",
+    "description": "Gentle swimmers that glide through oceans with grace and endurance."
+  },
+  {
+    "id": 5,
+    "name": "Octopus",
+    "category": "Cephalopod",
+    "image_url": "https://cdn.pixabay.com/photo/2013/02/10/03/40/diver-79948_1280.jpg",
+    "description": "Eight-armed and incredibly smart, capable of camouflage and problem-solving."
+  },
+  {
+    "id": 6,
+    "name": "Starfish",
+    "category": "Echinoderm",
+    "image_url": "https://cdn.pixabay.com/photo/2016/11/22/23/53/starfish-1851289_1280.jpg",
+    "description": "Radiating arms and the ability to regenerate lost limbs make them unique."
+  },
+  {
+    "id": 7,
+    "name": "Jellyfish",
+    "category": "Cnidarian",
+    "image_url": "https://cdn.pixabay.com/photo/2016/03/27/19/40/ocean-1283926_1280.jpg",
+    "description": "Graceful but dangerous, jellyfish float with pulsating movements."
+  },
+  {
+    "id": 8,
+    "name": "Seahorse",
+    "category": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2020/01/15/18/19/seahorse-4768599_1280.jpg",
+    "description": "Small upright-swimming creatures known for their curled tails and unique shape."
+  },
+  {
+    "id": 9,
+    "name": "Sea Lion",
+    "category": "Mammal",
+    "image_url": "https://cdn.pixabay.com/photo/2016/09/05/15/40/sea-lion-1646863_1280.jpg",
+    "description": "Playful and vocal marine mammals often seen basking on rocky shores."
+  },
+  {
+    "id": 10,
+    "name": "Lobster",
+    "category": "Crustacean",
+    "image_url": "https://cdn.pixabay.com/photo/2016/10/01/15/15/diving-1707742_1280.jpg",
+    "description": "Hard-shelled ocean bottom dwellers with strong claws and segmented bodies."
+  },
+  {
+    "id": 11,
+    "name": "Manta Ray",
+    "category": "Cartilaginous Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2016/09/02/18/14/manta-1639965_1280.jpg",
+    "description": "Gentle giants of the sea, known for their graceful gliding through deep waters."
+  },
+  {
+    "id": 12,
+    "name": "Moray Eel",
+    "category": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2013/12/17/20/11/moray-230017_1280.jpg",
+    "description": "Long, snake-like predators that lurk in coral crevices and ambush prey."
+  },
+  {
+    "id": 13,
+    "name": "Crab",
+    "category": "Crustacean",
+    "image_url": "https://cdn.pixabay.com/photo/2023/03/21/10/30/crab-7866915_1280.jpg",
+    "description": "Side-walking scavengers with strong pincers and a protective shell."
+  },
+  {
+    "id": 14,
+    "name": "Sea Urchin",
+    "category": "Echinoderm",
+    "image_url": "https://cdn.pixabay.com/photo/2016/07/23/13/00/sea-urchin-1536812_1280.jpg",
+    "description": "Spiny sea creatures that play an important role in reef ecosystems."
+  },
+  {
+    "id": 15,
+    "name": "Orca (Killer Whale)",
+    "category": "Mammal",
+    "image_url": "https://cdn.pixabay.com/photo/2017/06/23/09/22/orca-2434070_1280.jpg",
+    "description": "Powerful predators and social creatures, famous for their intelligence and teamwork."
+  },
+  {
+    "id": 16,
+    "name": "Sea Cucumber",
+    "category": "Echinoderm",
+    "image_url": "https://www.tetiaroasociety.org/sites/default/files/2019-05/sea%20cucumber4.jpg",
+    "description": "Soft-bodied and slow-moving, they help clean the seafloor naturally."
+  },
+  {
+    "id": 17,
+    "name": "Barracuda",
+    "category": "Fish",
+    "image_url": "https://cdn.pixabay.com/photo/2022/04/05/13/39/barracuda-7113619_1280.jpg",
+    "description": "Fast, fierce predators with a torpedo-like body and sharp teeth."
+  },
+  {
+    "id": 18,
+    "name": "Squid",
+    "category": "Cephalopod",
+    "image_url": "https://cdn.pixabay.com/photo/2013/04/07/01/17/squid-101375_1280.jpg",
+    "description": "Masters of jet propulsion and camouflage, with long tentacles and big eyes."
+  },
+  {
+    "id": 19,
+    "name": "Anglerfish",
+    "category": "Fish",
+    "image_url": "https://media.istockphoto.com/id/521618531/photo/ancient-angler-fish.jpg?b=1&s=612x612&w=0&k=20&c=WhFh0IGIhtDgF8aZ-ZLgMPXYs8nrJ6exW9ku23g5zPk=",
+    "description": "Deep-sea dwellers with a glowing lure to attract prey in the dark ocean depths."
+  },
+  {
+    "id": 20,
+    "name": "Beluga Whale",
+    "category": "Mammal",
+    "image_url": "https://images.pexels.com/photos/4666753/pexels-photo-4666753.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Friendly white whales known as 'sea canaries' due to their melodic vocalizations."
+  },
+  {
+    "id": 21,
+    "name": "Sea Otter",
+    "category": "Mammal",
+    "image_url": "https://images.pexels.com/photos/16171084/pexels-photo-16171084/free-photo-of-otter-lying-on-rocks.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Playful sea mammals known for floating on their backs and using tools to open shells."
+  },
+  {
+    "id": 22,
+    "name": "Humpback Whale",
+    "category": "Mammal",
+    "image_url": "https://images.pexels.com/photos/51964/humpback-whale-natural-spectacle-nature-mammal-51964.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Massive ocean wanderers known for breaching and melodic songs echoing through the sea."
+  },
+  {
+    "id": 23,
+    "name": "Hammerhead Shark",
+    "category": "Cartilaginous Fish",
+    "image_url": "https://images.pexels.com/photos/4781942/pexels-photo-4781942.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Easily recognized by their hammer-shaped heads, enhancing their sensory range."
+  },
+  {
+    "id": 24,
+    "name": "Sea Snake",
+    "category": "Reptile",
+    "image_url": "https://images.pexels.com/photos/6200064/pexels-photo-6200064.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Highly venomous marine reptiles with paddle-like tails for swimming."
+  },
+  {
+    "id": 25,
+    "name": "Coral",
+    "category": "Cnidarian",
+    "image_url": "https://images.pexels.com/photos/920161/pexels-photo-920161.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Not just colorful rocks—corals are living animals that build vibrant reef ecosystems."
+  },
+  {
+    "id": 26,
+    "name": "Sea Horse",
+    "category": "Fish",
+    "image_url": "https://images.pexels.com/photos/7868382/pexels-photo-7868382.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Gentle swimmers with curled tails, known for the male carrying the babies."
+  },
+  {
+    "id": 27,
+    "name": "Nudibranch",
+    "category": "Mollusk",
+    "image_url": "https://images.pexels.com/photos/29672972/pexels-photo-29672972/free-photo-of-vibrant-nudibranch-captured-in-macro-underwater-photography.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Colorful sea slugs with stunning patterns found on coral reefs."
+  },
+  {
+    "id": 28,
+    "name": "Manatee",
+    "category": "Mammal",
+    "image_url": "https://images.pexels.com/photos/8026836/pexels-photo-8026836.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Gentle herbivores called 'sea cows', slowly grazing in warm coastal waters."
+  },
+  {
+    "id": 29,
+    "name": "Pufferfish",
+    "category": "Fish",
+    "image_url": "https://images.pexels.com/photos/3358137/pexels-photo-3358137.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Inflates like a balloon when threatened, and some species are highly toxic."
+  },
+  {
+    "id": 30,
+    "name": "Sea Pen",
+    "category": "Cnidarian",
+    "image_url": "https://images.pexels.com/photos/1112007/pexels-photo-1112007.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "description": "Feather-like colonial animals anchored in soft seabeds, glowing under UV light."
+  }
+]

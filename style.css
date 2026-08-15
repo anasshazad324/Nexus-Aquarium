@@ -1,0 +1,441 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0ffff;
+}
+
+.logo {
+  height: 50px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #013243 !important;
+  transition: color 0.2s;
+  
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ced1 !important;
+}
+
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+  background-color: #00ced1;
+  color: white;
+}
+.custom-navbar {
+  background-color: #001f3f; /* Dark ocean blue */
+}
+
+.navbar-nav .nav-link {
+  color: #e0ffff !important; /* Light cyan */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ced1 !important; /* Aqua hover */
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: bold;
+
+}
+
+.navbar-toggler {
+  border-color: #e0ffff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23e0ffff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224,255,255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('./assets/pexels-jeswin-792643.jpg') no-repeat center center/cover;
+  z-index: 1;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 31, 63, 0.6); /* dark blue overlay */
+  z-index: 2;
+}
+
+.hero-content {
+  z-index: 3;
+  max-width: 700px;
+}
+
+.hero-section h1,
+.hero-section p {
+  color: white;
+}
+.marine-life-section h2 {
+  font-size: 2.5rem;
+}
+
+.marine-life-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #013243;
+}
+.footer-link {
+  color: #d1ecf1;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #00ced1;
+}
+
+.social-icons i {
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+
+.social-icons i:hover {
+  color: #00ced1;
+}
+.fish-section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fish-section:hover {
+  transform: translateY(-5px);
+}
+
+.hover-fade img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hover-fade:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+.mammals-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mammals-section h2 {
+  text-align: center;
+  color: #013243;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.mammal-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  background: #eafaff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.mammal-row:hover {
+  transform: translateY(-5px);
+}
+
+.mammal-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.mammal-image {
+  flex: 1;
+}
+
+.mammal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  display: block;
+}
+
+.mammal-text {
+  flex: 1;
+  padding: 30px;
+}
+
+.mammal-text h3 {
+  color: #005b99;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.mammal-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #00c4cc;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mammal-row,
+  .mammal-row.reverse {
+    flex-direction: column;
+  }
+
+  .mammal-image img {
+    max-height: 250px;
+  }
+
+  .mammal-text {
+    text-align: center;
+  }
+}
+
+/* ========== */
+
+.cru-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reptile-section h2 {
+  text-align: center;
+  color: #013243;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.reptile-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  background: #eafaff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.reptile-row:hover {
+  transform: translateY(-5px);
+}
+
+.reptile-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.reptile-image {
+  flex: 1;
+}
+
+.reptile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  display: block;
+}
+
+.reptile-text {
+  flex: 1;
+  padding: 30px;
+}
+
+.reptile-text h3 {
+  color: #005b99;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.reptile-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #00c4cc;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reptile-row,
+  .reptile-row.reverse {
+    flex-direction: column;
+  }
+
+  .reptile-image img {
+    max-height: 250px;
+  }
+
+  .reptile-text {
+    text-align: center;
+  }
+}
+
+/* ================ */
+
+
+.crustaocean-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.crustaocean-section h2 {
+  text-align: center;
+  color: #013243;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.crustaocean-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  background: #eafaff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.crustaocean-row:hover {
+  transform: translateY(-5px);
+}
+
+.crustaocean-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.crustaocean-image {
+  flex: 1;
+}
+
+.crustaocean-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  display: block;
+}
+
+.crustaocean-text {
+  flex: 1;
+  padding: 30px;
+}
+
+.crustaocean-text h3 {
+  color: #005b99;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.crustaocean-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #00c4cc;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .crustaocean-row,
+  .crustaocean-row.reverse {
+    flex-direction: column;
+  }
+
+  .crustocean-image img {
+    max-height: 250px;
+  }
+
+  .crustaocean-text {
+    text-align: center;
+  }
+}
+
+
+
+.form-container {
+  background-color:#013243;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  margin: 25px; 
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: #013243;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #e6e6e6;
+}
+
+

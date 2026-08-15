@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Nexus Aquarium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #004e92, #000428);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      gap: 2rem;
+    }
+
+    .info-panel {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .info-panel h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .info-panel p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .form-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      flex: 1;
+      max-width: 500px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-floating > .form-control {
+      background-color: transparent;
+      color: white;
+      border: 1px solid #00c6ff;
+    }
+
+    .form-floating > label {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .form-control:focus {
+      border-color: #00c6ff;
+      box-shadow: 0 0 0 0.2rem rgba(0,198,255,0.25);
+    }
+
+    .btn-submit {
+      background-color: #00c6ff;
+      border: none;
+    }
+
+    .btn-submit:hover {
+      background-color: #00a6d6;
+    }
+
+    .error {
+      color: #ffb3b3;
+      font-size: 0.85rem;
+      margin-top: 4px;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Top Bar -->
+<div class="topbar d-flex justify-content-between align-items-center px-4 py-1 text-dark small bg-light">
+  <div>
+    <strong>Mon-Thu:</strong> 10:00 AM – 11:00 PM | Last Entry 10:15 PM
+  </div>
+  <div>
+    <strong>Fri-Sun:</strong> 10:00 AM – 12:00 AM | Last Entry 11:15 PM
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm py-3">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+     <img src="./assets/octopus_5517980.png" alt="Logo" class="logo me-2">
+      <span class="fw-bold text-primary fs-4">Nexus Aquarium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marine Life</a>
+          <ul class="dropdown-menu dropdown-menu-light">
+            <li><a class="dropdown-item" href="./fish.html">Fish</a></li>
+            <li><a class="dropdown-item" href="./mamals.html">Mammals</a></li>
+            <li><a class="dropdown-item" href="./reptiles.html">Reptiles</a></li>
+            <li><a class="dropdown-item" href="./crustaoceans.html">Crustaceans</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="./event.html" role="button" >Events</a>
+          </li>
+
+        <li class="nav-item"><a class="nav-link" href="./booking.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="./timing-location.html">Timings & Location</a></li>
+        <li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-container">
+
+  <!-- Info Panel -->
+  <div class="info-panel">
+    <h2><i class="bi bi-chat-dots-fill me-2"></i>Let’s Talk!</h2>
+    <p>Have a question, suggestion, or just want to say hi? Drop us a message and we'll get back to you as soon as possible.</p>
+    <ul class="mt-4">
+      <li><i class="bi bi-envelope-fill me-2"></i> info@nexusaquarium.com</li>
+      <li><i class="bi bi-telephone-fill me-2"></i> +1 (123) 456-7890</li>
+      <li><i class="bi bi-geo-alt-fill me-2"></i> 123 Marine Blvd, Washington, DC</li>
+    </ul>
+  </div>
+
+  <!-- Form Panel -->
+  <div class="form-card">
+    <form id="contactForm" novalidate>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+        <label for="name">Your Name</label>
+        <div class="error" id="nameError">Please enter your name</div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        <label for="email">Email address</label>
+        <div class="error" id="emailError">Please enter a valid email</div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+        <label for="subject">Subject</label>
+        <div class="error" id="subjectError">Subject can't be empty</div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 120px" required></textarea>
+        <label for="message">Your Message</label>
+        <div class="error" id="messageError">Message is required</div>
+      </div>
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-submit px-4 py-2">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer-section bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Nexus Aquarium</h4>
+        <p>Step into an underwater world filled with wonder. Nexus Aquarium brings marine life closer than ever before.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Gallery</a></li>
+          <li><a href="#" class="footer-link">Marine Life</a></li>
+          <li><a href="#" class="footer-link">Events</a></li>
+          <li><a href="#" class="footer-link">Bookings</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Washington, DC</p>
+        <p><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</p>
+        <p><i class="bi bi-envelope-fill"></i> info@nexusaquarium.com</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-twitter text-white"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bg-light" />
+    <div class="text-center small">
+      &copy; 2025 Nexus Aquarium. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JavaScript Validation
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let valid = true;
+
+    // Reset error messages
+    document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+
+    // Validate Name
+    const name = document.getElementById('name');
+    if (!name.value.trim()) {
+      valid = false;
+      document.getElementById('nameError').style.display = 'block';
+    }
+
+    // Validate Email
+    const email = document.getElementById('email');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+      valid = false;
+      document.getElementById('emailError').style.display = 'block';
+    }
+
+    // Validate Subject
+    const subject = document.getElementById('subject');
+    if (!subject.value.trim()) {
+      valid = false;
+      document.getElementById('subjectError').style.display = 'block';
+    }
+
+    // Validate Message
+    const message = document.getElementById('message');
+    if (!message.value.trim()) {
+      valid = false;
+      document.getElementById('messageError').style.display = 'block';
+    }
+
+    // If all valid
+    if (valid) {
+      alert('Thank you! Your message has been sent successfully.');
+      form.reset();
+    }
+  });
+</script>
+
+</body>
+</html>

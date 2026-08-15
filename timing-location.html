@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timings & Location | Nexus Aquarium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #f2f8fb;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      color: #013a63;
+      font-weight: 700;
+      font-size: 2.6rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #00b4d8;
+      margin: 12px auto 0;
+      border-radius: 10px;
+    }
+
+    .info-section {
+      padding: 60px 0;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-content {
+      padding: 30px;
+    }
+
+    .info-content h4 {
+      color: #005b99;
+      margin-bottom: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .info-item i {
+      color: #00b4d8;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .info-img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-section {
+      background: #e6f5ff;
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="topbar d-flex justify-content-between align-items-center px-4 py-1 text-dark small bg-light">
+  <div>
+    <strong>Mon-Thu:</strong> 10:00 AM – 11:00 PM | Last Entry 10:15 PM
+  </div>
+  <div>
+    <strong>Fri-Sun:</strong> 10:00 AM – 12:00 AM | Last Entry 11:15 PM
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm py-3">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+     <img src="./assets/octopus_5517980.png" alt="Logo" class="logo me-2">
+      <span class="fw-bold text-primary fs-4">Nexus Aquarium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marine Life</a>
+          <ul class="dropdown-menu dropdown-menu-light">
+            <li><a class="dropdown-item" href="./fish.html">Fish</a></li>
+            <li><a class="dropdown-item" href="./mamals.html">Mammals</a></li>
+            <li><a class="dropdown-item" href="./reptiles.html">Reptiles</a></li>
+            <li><a class="dropdown-item" href="./crustaoceans.html">Crustaceans</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="./event.html" role="button" >Events</a>
+          </li>
+
+        <li class="nav-item"><a class="nav-link" href="./booking.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="./timing-location.html">Timings & Location</a></li>
+        <li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="info-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Timings & Location</h2>
+    </div>
+
+    <div class="row g-5 align-items-stretch">
+      <!-- Timings -->
+      <div class="col-lg-6">
+        <div class="info-box d-flex flex-column flex-md-row h-100">
+          <div class="col-md-6 p-0">
+            <img src="./assets/underwater.webp" class="info-img" alt="Timings Image">
+          </div>
+          <div class="col-md-6 info-content">
+            <h4><i class="bi bi-clock-fill me-2"></i>Opening Hours</h4>
+            <div class="info-item"><i class="bi bi-calendar-week"></i> Mon–Thu: <strong class="ms-2">10:00 AM – 11:00 PM</strong></div>
+            <div class="info-item"><i class="bi bi-hourglass-split"></i> Last Entry: <strong class="ms-2">10:15 PM</strong></div>
+            <div class="info-item mt-3"><i class="bi bi-calendar-event"></i> Fri–Sun: <strong class="ms-2">10:00 AM – 12:00 AM</strong></div>
+            <div class="info-item"><i class="bi bi-hourglass-top"></i> Last Entry: <strong class="ms-2">11:15 PM</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="col-lg-6">
+        <div class="info-box d-flex flex-column flex-md-row h-100">
+          <div class="col-md-6 p-0">
+            <img src="./assets/aqquruim bg" class="info-img" alt="Location Image">
+          </div>
+          <div class="col-md-6 info-content">
+            <h4><i class="bi bi-geo-alt-fill me-2"></i>Visit Us</h4>
+            <div class="info-item"><i class="bi bi-geo-fill"></i> 123 Marine Avenue, Washington, DC</div>
+            <div class="info-item"><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</div>
+            <div class="info-item"><i class="bi bi-envelope-fill"></i> info@nexusaquarium.com</div>
+            <div class="info-item"><i class="bi bi-bus-front-fill"></i> Metro & parking available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Find Us on the Map</h2>
+    </div>
+    <div class="map-container ratio ratio-16x9">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.019389217054!2d-77.03687028464718!3d38.90719217957056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789!2sNational%20Aquarium!5e0!3m2!1sen!2sus!4v1629909919466"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+<!-- Plan Your Visit Section -->
+<section class="visit-section py-5 bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Plan Your Visit</h2>
+    </div>
+    <div class="accordion" id="visitAccordion">
+      <!-- Tickets & Pricing -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTickets">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTickets" aria-expanded="true" aria-controls="collapseTickets">
+            🎟️ Tickets & Pricing
+          </button>
+        </h2>
+        <div id="collapseTickets" class="accordion-collapse collapse show" aria-labelledby="headingTickets" data-bs-parent="#visitAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Adults: $25</li>
+              <li>Children (3-12): $15</li>
+              <li>Under 3: Free</li>
+              <li>Students & Seniors: $20 (with ID)</li>
+              <li>Group discounts available</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Best Times to Visit -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingBestTimes">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBestTimes" aria-expanded="false" aria-controls="collapseBestTimes">
+            🕒 Best Times to Visit
+          </button>
+        </h2>
+        <div id="collapseBestTimes" class="accordion-collapse collapse" aria-labelledby="headingBestTimes" data-bs-parent="#visitAccordion">
+          <div class="accordion-body">
+            <p>For a more relaxed experience, consider visiting:</p>
+            <ul>
+              <li>Weekdays: Early mornings or late afternoons</li>
+              <li>Weekends: Arrive before 11:00 AM to avoid peak hours</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Accessibility & Amenities -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAccessibility">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAccessibility" aria-expanded="false" aria-controls="collapseAccessibility">
+            ♿ Accessibility & Amenities
+          </button>
+        </h2>
+        <div id="collapseAccessibility" class="accordion-collapse collapse" aria-labelledby="headingAccessibility" data-bs-parent="#visitAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Wheelchair accessible entrances and pathways</li>
+              <li>On-site café offering a variety of refreshments</li>
+              <li>Gift shop with souvenirs and educational materials</li>
+              <li>Restrooms equipped with baby changing stations</li>
+              <li>Free Wi-Fi throughout the facility</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Parking & Transportation -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingParking">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParking" aria-expanded="false" aria-controls="collapseParking">
+            🚗 Parking & Transportation
+          </button>
+        </h2>
+        <div id="collapseParking" class="accordion-collapse collapse" aria-labelledby="headingParking" data-bs-parent="#visitAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>On-site parking garage with hourly rates</li>
+              <li>Accessible via Metro Line Blue – Marine Ave Station</li>
+              <li>Bike racks available near the main entrance</li>
+              <li>Ride-sharing drop-off zone located at the front gate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Nexus Aquarium</h4>
+        <p>Step into an underwater world filled with wonder. Nexus Aquarium brings marine life closer than ever before.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">Gallery</a></li>
+          <li><a href="#" class="footer-link">Marine Life</a></li>
+          <li><a href="#" class="footer-link">Events</a></li>
+          <li><a href="#" class="footer-link">Bookings</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Washington, DC</p>
+        <p><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</p>
+        <p><i class="bi bi-envelope-fill"></i> info@nexusaquarium.com</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-twitter text-white"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bg-light" />
+    <div class="text-center small">
+      &copy; 2025 Nexus Aquarium. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

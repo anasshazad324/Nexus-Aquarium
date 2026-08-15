@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Aquarium</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar d-flex justify-content-between align-items-center px-4 py-1 text-dark small bg-light">
+  <div>
+    <strong>Mon-Thu:</strong> 10:00 AM – 11:00 PM | Last Entry 10:15 PM
+  </div>
+  <div>
+    <strong>Fri-Sun:</strong> 10:00 AM – 12:00 AM | Last Entry 11:15 PM
+  </div>
+</div>
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm py-3">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./assets/octopus_5517980.png" alt="Logo" class="logo me-2">
+      <span class="fw-bold text-primary fs-4">Nexus Aquarium</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto gap-3">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Marine Life</a>
+          <ul class="dropdown-menu dropdown-menu-light">
+            <li><a class="dropdown-item" href="./fish.html">Fish</a></li>
+            <li><a class="dropdown-item" href="./mamals.html">Mammals</a></li>
+            <li><a class="dropdown-item" href="./reptiles.html">Reptiles</a></li>
+            <li><a class="dropdown-item" href="./crustaoceans.html">Crustaceans</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/e-project/event.html" role="button" >Events</a>
+          </li>
+
+        <li class="nav-item"><a class="nav-link" href="./booking.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="./timing-location.html">Timings & Location</a></li>
+        <li class="nav-item"><a class="nav-link" href="./feedback.html">Feedback</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Gallery Section -->
+<section class="gallery-section py-5">
+  <div class="container">
+    <h2 class="text-center text-primary fw-bold mb-4">Sea Creature Gallery</h2>
+    <p class="text-center mb-4">Discover amazing marine life from around the world.</p>
+
+    <div class="row g-4" id="gallery-container">
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & About -->
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Nexus Aquarium</h4>
+        <p>Step into an underwater world filled with wonder. Nexus Aquarium brings marine life closer than ever before.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="./index.html" class="footer-link">Home</a></li>
+          <li><a href="./gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="#" class="footer-link">Marine Life</a></li>
+          <li><a href="#" class="footer-link">Events</a></li>
+          <li><a href="./booking.html" class="footer-link">Bookings</a></li>
+          <li><a href="./contact-us.html" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Washington, DC</p>
+        <p><i class="bi bi-telephone-fill"></i> +1 (123) 456-7890</p>
+        <p><i class="bi bi-envelope-fill"></i> info@nexusaquarium.com</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white me-3"></i></a>
+          <a href="#"><i class="bi bi-twitter text-white"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="bg-light" />
+    <div class="text-center small">
+      &copy; 2025 Nexus Aquarium. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  fetch('api.json')
+    .then(res => res.json())
+    .then(data => {
+      const gallery = document.getElementById('gallery-container');
+      data.forEach(animal => {
+        const col = document.createElement('div');
+        col.className = 'col-sm-6 col-md-4 col-lg-3';
+
+        col.innerHTML = `
+          <div class="card h-100 shadow-sm">
+            <img src="${animal.image_url}" class="card-img-top" alt="${animal.name}">
+            <div class="card-body">
+              <h5 class="card-title text-primary">${animal.name}</h5>
+              <p class="card-text small">${animal.description}</p>
+              <span class="badge bg-info text-dark">${animal.category}</span>
+            </div>
+          </div>
+        `;
+        gallery.appendChild(col);
+      });
+    })
+    .catch(err => {
+      document.getElementById('gallery-container').innerHTML = `<p class="text-danger text-center">Failed to load gallery data.</p>`;
+      console.error(err);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
